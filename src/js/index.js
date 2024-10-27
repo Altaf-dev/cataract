@@ -17,6 +17,8 @@ const REVIEW_BG = document.querySelector('.modal-bg-review')
 const REVIEW_POPUP = document.querySelector('.review-paragraph')
 const ICON_WRAPPER = document.querySelector('.icon-wrapper')
 
+const CATARACT_BG = document.querySelector('.modal-bg-cataract')
+
 const REVIEW_LIST = document.querySelector('.list-wrapper')
 const REVIEW_ITEM = document.querySelectorAll('.review-item')
 const REVIEW_BTN = document.querySelector('.reviews__btn')
@@ -164,6 +166,7 @@ function scrollAuto() {
 function closeModal() {
     MODAL_BG.classList.remove('active')
     REVIEW_BG.classList.remove('active')
+    CATARACT_BG.classList.remove('active')
     modalItems.forEach((item) => {
         item.classList.remove('active')
     })
@@ -196,6 +199,11 @@ openModal.forEach((item) => {
                 modals.classList.add('active')
                 scrollStop()
             }
+            if (modals.classList.contains(item.getAttribute('data-cataract'))){
+                CATARACT_BG.classList.add('active')
+                modals.classList.add('active')
+                scrollStop()
+            }
         })
         modalItems.forEach((review) => {
             if (review.classList.contains(item.getAttribute('data-review'))) {
@@ -208,7 +216,6 @@ openModal.forEach((item) => {
                 let icon = descReviewIcon.getAttribute('src')
                 REVIEW_POPUP.innerHTML = `<p>${descReviewTitle.innerHTML}</p>` + `<br>` + `<p>${descReviewElement.innerHTML}</p>`
                 ICON_WRAPPER.innerHTML = `<img src="${icon}" alt="">`
-
             }
         })
     })
