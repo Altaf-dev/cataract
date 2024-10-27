@@ -1,0 +1,653 @@
+<% var data = {
+title: "ГлазоЛик",
+description: "Какое то описание для страницы, для каждой страницы свое описание"
+}; %>
+
+<!--header-->
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<main>
+    <section class="main section" id="main">
+        <div class="container">
+            <div class="main__background">
+                <span class="background-decor"></span>
+                <img src="img/main-bg.jpg" alt="img" class="background-img">
+            </div>
+            <div class="main__wrapper">
+                <div class="main__text">
+                    <h1 class="title">Лечение катаракты с пожизненным эффектом за 10 минут без боли и наложения швов </h1>
+                    <span class="main__subtitle">Занимаемся лечением катаракты с 2007 года. Каждый третий пациент приезжает к нам из другого города </span>
+                    <button class="main__btn main-btn openModal" data-modal="modal-consultation">Получить консультацию</button>
+                </div>
+                <div class="main__desc">
+                    <span class="desc-title">Елена Бахтияровна</span>
+<!--                    <span class="desc-subtitle">Кандидат медицинских наук. <br> Офтальмолог с 1995 года. <br> Хирург с опытом более 30 тысяч операций</span>-->
+                    <span class="desc-subtitle">Кандидат медицинских наук. Офтальмолог с 1995 года. Хирург с опытом более 30 тысяч операций</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantage section" id="advantage">
+        <div class="container">
+            <div class="advantage__list">
+                <div class="list-item">
+                    <img src="img/eye.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">Сможете смотреть телевизор и работать за компьютером уже через 3 часа после операции</span>
+                </div>
+                <div class="list-item">
+                    <img src="img/heart.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">Без вреда и рисков: сделаем коррекцию, только если для вас она будет безопасна на 100% </span>
+                </div>
+                <div class="list-item">
+                    <img src="img/wing.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">Мы одни из первых лазерных хирургов в Казахстане. Проводим коррекцию с 2007 года</span>
+                </div>
+                <div class="list-item">
+                    <img src="img/5star.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">188 оценок на Яндекс. картах и 279 отзывов на Google картах</span>
+                </div>
+            </div>
+            <div class="advantage__form">
+                <div class="img-wrapper">
+                    <img src="img/advantage-form.jpg" alt="img" class="form-img">
+                </div>
+                <h3 class="title">Получите консультацию <br> об операции и работе клиники</h3>
+                <span class="subtitle">Если не хотите читать сайт и вам лучше поговорить <br> с живым человеком — оставьте контакты. <br> Мы перезвоним в течение 30 минут и с радостью <br> ответим на все ваши вопросы</span>
+                <form action="./php/mail.php"
+                      id="advantageForm"
+                      method="post"
+                      accept-charset="utf-8"
+                      enctype="multipart/form-data"
+                      class="form-body">
+                    <input type="text" class="input" name="phone" required placeholder="Телефон">
+                    <input type="text" class="input" name="name" placeholder="Имя">
+                    <button class="advantage-btn main-btn" type="submit">Получить консультацию</button>
+                </form>
+                <div class="contacts-title">Или свяжитесь удобным способом:</div>
+                <div class="contacts-list">
+                    <a href="tel:+77019842743" class="contacts-link">+7 (775) 117 33 33</a>
+                    <a href="https://wa.me/+77751173333" class="contacts-link" target="_blank">WhatsApp</a>
+                    <a href="https://t.me/+77751173333" class="contacts-link" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions section" id="questions">
+        <div class="container">
+            <span class="section-title">Об операции</span>
+            <h2 class="title">Вылечим катаракту самым современным способом — с помощью ультразвуковой факоэмульсификации</h2>
+            <span class="subtitle">
+                На сегодняшний день это самый безопасный и безболезненный способ лечения катаракты.
+            </span>
+            <br>
+            <span class="subtitle">
+                Вся операция проходит за 10 минут: делаем в роговице небольшой прокол шириной 2 мм,
+                удаляем ваш помутневший хрусталик с помощью ультразвука и имплантируем вместо него
+                искусственный хрусталик.
+            </span>
+            <div class="questions__slider-wrapper">
+                <div class="slider-title openModal" data-modal="modal-cataract">Что такое катаракта и какие у неё последствия</div>
+                <div class="slider-title-mobile openModal" data-modal="modal-cataract">Что такое катаракта и</div>
+                <div class="slider-title-mobile openModal" data-modal="modal-cataract">какие у неё последствия</div>
+                <div class="questions__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/about1.jpg" alt="img" class="questions__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/about2.jpg" alt="img" class="questions__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/about3.jpg" alt="img" class="questions__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/about4.jpg" alt="img" class="questions__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/about5.jpg" alt="img" class="questions__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/about6.jpg" alt="img" class="questions__img">
+                        </div>
+                    </div>
+                    <div class="questions-button-prev button-prev"></div>
+                    <div class="questions-button-next button-next"></div>
+                </div>
+            </div>
+            <div class="questions__advantage">
+                <div class="advantage-item">
+                    <img src="img/eyeDrop.svg" alt="icon" class="item-icon">
+                    <div class="item-title">Проводим операцию под местной анестезией за 10 минут</div>
+                    <div class="item-desc">
+                        Это более безопасно для пожилых пациентов,
+                        потому что в отличии от общего наркоза не нагружает
+                        сердечно-сосудистую систему.
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <img src="img/calendar.svg" alt="icon" class="item-icon">
+                    <div class="item-title">Полное восстановление за 30 дней</div>
+                    <div class="item-desc">
+                        За счёт небольшого прокола и отсутствия швов,
+                        глаз восстанавливается быстрее.
+                        <br>
+                        <br>
+                        Через 3 часа вы уже сможете смотреть телевизор,
+                        а через 30 дней получите полное восстановленное зрение.
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <img src="img/glasses.svg" alt="icon" class="item-icon">
+                    <div class="item-title">Корректируем близорукость, дальнозоркость и астигматизм</div>
+                    <div class="item-desc">
+                        С помощью особых линз мы можем избавить вас от
+                        зависимости от очков и скорректировать астигматизм.
+                    </div>
+                </div>
+            </div>
+            <div class="questions__video">
+                <div class="video-desc">
+                    <span class="desc-title">Это больно?</span>
+                    <span class="desc-paragraph">Это совсем не больно. Перед операцией мы капаем обезболивающие капли, под которыми мы проводим даже более сложные хирургические операции. <br><br> Максимум, вам будет просто неприятно, что кто-то касается глаз на протяжении 10 секунд.</span>
+                </div>
+                <div class="video-slider">
+                    <div class="slider-wrapper">
+                        <div class="swiper-wrapper">
+                            <a href="https://youtu.be/I7TSVhWqjJc" class="swiper-slide" target="_blank">
+                                <video width="100%" height="100%" loop muted poster="img/review4.png" class="video-slide">
+                                    <source src="reviewsvideo/review4.mp4" type="video/mp4">
+                                    <!--<source src="video/review1/review1.webm" type="video/webm">
+                                    <source src="video/review1/review1.ogv" type="video/ogg">-->
+                                </video>
+                            </a>
+                            <a href="https://youtu.be/hbrz8NFaBV8" class="swiper-slide" target="_blank">
+                                <video width="100%" height="100%" loop muted poster="img/review5.png" class="video-slide">
+                                    <source src="reviewsvideo/review5.mp4" type="video/mp4">
+                                    <!--<source src="video/review1/review1.webm" type="video/webm">
+                                    <source src="video/review1/review1.ogv" type="video/ogg">-->
+                                </video>
+                            </a>
+                            <a href="https://youtu.be/w1mzFKUVq70" class="swiper-slide" target="_blank">
+                                <video width="100%" height="100%" loop muted poster="img/review2.png" class="video-slide">
+                                    <source src="reviewsvideo/review2.mp4" type="video/mp4">
+                                    <!--<source src="video/review1/review1.webm" type="video/webm">
+                                    <source src="video/review1/review1.ogv" type="video/ogg">-->
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="slider-desc">Пациенты клиники делятся впечатлениями об операции</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lenses section" id="lenses">
+        <div class="container">
+            <span class="section-title">Интраокулярные линзы (ИОЛ)</span>
+            <h2 class="title">Имплантируем проверенные искусственные хрусталики от лучших мировых производителей</h2>
+            <span class="subtitle">
+                На сегодняшний день это самый безопасный и безболезненный способ лечения катаракты.
+                <br>
+                <br>
+                Вся операция проходит за 10 минут: делаем в роговице небольшой прокол шириной 2 мм,
+                удаляем ваш помутневший хрусталик с помощью ультразвука и имплантируем вместо него искусственный хрусталик.
+            </span>
+
+            <div class="lenses__list">
+                <div class="list-item">
+                    <img src="img/Clareon Monofocal Wire1.png" alt="image" class="item-img">
+                    <div class="item-title">Монофокальные <br> ИОЛ</div>
+                    <div class="item-desc">
+                        Более бюджетный вариант. Позволяют чётко видеть только на одном расстоянии – вблизи или вдали.
+                        <br>
+                        <br>
+                        После операции потребуется ношение очков или контактных линз.
+                    </div>
+                </div>
+                <div class="list-item">
+                    <img src="img/Clareon Monofocal Wire2.png" alt="image" class="item-img">
+                    <div class="item-title">Мультифокальные <br> ИОЛ</div>
+                    <div class="item-desc">
+                        Разделяются на бифокальные и трифокальные.
+                        <br>
+                        <br>
+                        Бифокальные имеют две фокусные точки и позволяют
+                        видеть без очков на среднем и дальнем расстоянии.
+                        Нужны очки для чтения.
+                        <br>
+                        <br>
+                        Трифокальные хрусталики имеют три
+                        фокуса: для фокусировки зрения одновременно на близком,
+                        среднем и дальнем расстоянии.
+                        Позволяют полностью избавиться от очков и линз.
+                    </div>
+                </div>
+                <div class="list-item">
+                    <img src="img/Clareon Monofocal Wire3.png" alt="image" class="item-img">
+                    <div class="item-title">Торические <br> ИОЛ</div>
+                    <div class="item-desc">
+                        Позволяют скорректировать астигматизм больше 1 диоптрии.
+                        <br>
+                        <br>
+                        Бывают как монофокальными, так и мультифокальными
+                    </div>
+                </div>
+                <button class="lenses__btn main-btn openModal" data-modal="modal-consultation">Записаться на диагностику</button>
+            </div>
+            <div class="lenses__form">
+                <img src="img/price-form.jpg" alt="img" class="form-img">
+                <div class="form-wrapper">
+                    <span class="form-title">Запишитесь на диагностику</span>
+                    <span class="form-title-mobile">Запишитесь на диагностику и узнайте, насколько безопасно делать коррекцию именно в вашем случае</span>
+                    <span class="form-subtitle">Для записи оставьте контакты, перезвоним в течение 30 минут
+                        <span class="subtitle-accent">в рабочее время</span>
+                    </span>
+                    <span class="form-sum">17 000 ₸</span>
+                    <span class="sum-desc">Стоимость диагностики </span>
+                    <form action="./php/mail.php"
+                          id="lensesForm"
+                          method="post"
+                          accept-charset="utf-8"
+                          enctype="multipart/form-data"
+                          class="form-body">
+                        <input type="text" class="input" name="phone" required placeholder="Телефон">
+                        <input type="text" class="input" name="name" placeholder="Имя">
+                        <button class="lenses-btn main-btn" type="submit">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="doctors section" id="doctors">
+        <div class="container">
+            <span class="section-title">доктора</span>
+            <h2 class="title">Можете быть спокойны — вы в руках одних из лучших специалистов по лазерной хирургии в Казахстане</h2>
+            <div class="doctors__list">
+                <div class="doctors__card visible">
+                    <div class="img-wrapper">
+                        <img src="img/doctor111.jpg" alt="img" class="doctor-img">
+                    </div>
+                    <div class="cert-wrapper">
+                        <div class="cert-list">
+                            <a class="cert-link" data-fancybox="gallery-1" href="img/cert1.jpg"><img src="img/cert1.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-1" href="img/cert2.jpg"><img src="img/cert2.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-1" href="img/cert3.jpg"><img src="img/cert3.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-1" href="img/cert4.jpg"><img src="img/cert4.jpg" alt="cert" class="cert-item"></a>
+
+                        </div>
+                        <div class="list-desc">Показать все дипломы и сертификаты (<span class="item-sum"></span>)</div>
+                    </div>
+                    <div class="desc-wrapper">
+                        <span class="card-title">Баймуханова Елена Бахтияровна</span>
+                        <span class="card-desc">Врач-офтальмолог с 1995 года, кандидат медицинских наук, врач высшей категории, отличник здравоохранения РК.</span>
+                        <br>
+                        <span class="card-desc">Хирург с опытом более 30 тысяч операций;</span>
+                        <br>
+                        <span class="card-desc">Участник международных конгрессов: посещала офтальмологические клиники Турции, Израиля, Лондона, Швейцарии и России.</span>
+                        <br>
+                        <span class="card-desc">Основные направления: факоэмульсификация катаракты, факичные линзы, лазерная коррекции зрения, хирургия глаукомы, исправление косоглазия.</span>
+                        <span class="card-quote">“Самый лучший офтальмолог, моя любимая доктор Елена Бахтияровна всегда в передовых инновациях одна из первых!”</span>
+                        <div class="quote-link">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.375C2.89838 0.375 0.375 2.89838 0.375 6V15C0.375 18.1016 2.89838 20.625 6 20.625H15C18.1016 20.625 20.625 18.1016 20.625 15V6C20.625 2.89838 18.1016 0.375 15 0.375H6ZM6 2.625H15C16.8608 2.625 18.375 4.13925 18.375 6V15C18.375 16.8608 16.8608 18.375 15 18.375H6C4.13925 18.375 2.625 16.8608 2.625 15V6C2.625 4.13925 4.13925 2.625 6 2.625ZM16.125 3.75C15.8266 3.75 15.5405 3.86853 15.3295 4.0795C15.1185 4.29048 15 4.57663 15 4.875C15 5.17337 15.1185 5.45952 15.3295 5.6705C15.5405 5.88147 15.8266 6 16.125 6C16.4234 6 16.7095 5.88147 16.9205 5.6705C17.1315 5.45952 17.25 5.17337 17.25 4.875C17.25 4.57663 17.1315 4.29048 16.9205 4.0795C16.7095 3.86853 16.4234 3.75 16.125 3.75ZM10.5 4.875C7.39838 4.875 4.875 7.39838 4.875 10.5C4.875 13.6016 7.39838 16.125 10.5 16.125C13.6016 16.125 16.125 13.6016 16.125 10.5C16.125 7.39838 13.6016 4.875 10.5 4.875ZM10.5 7.125C12.3608 7.125 13.875 8.63925 13.875 10.5C13.875 12.3608 12.3608 13.875 10.5 13.875C8.63925 13.875 7.125 12.3608 7.125 10.5C7.125 8.63925 8.63925 7.125 10.5 7.125Z" fill="#FFFFFF"/>
+                            </svg>
+                            Igynekolog_larissa
+                        </div>
+                    </div>
+                </div>
+                <div class="doctors__card hide">
+                    <div class="img-wrapper">
+                        <img src="img/doctor2.jpg" alt="img" class="doctor-img">
+                    </div>
+                    <div class="cert-wrapper">
+                        <div class="cert-list">
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert1.jpg"><img src="img/doctor2cert/cert1.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert2.jpg"><img src="img/doctor2cert/cert2.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert3.jpg"><img src="img/doctor2cert/cert3.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert4.jpg"><img src="img/doctor2cert/cert4.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert5.jpg"><img src="img/doctor2cert/cert5.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert6.jpg"><img src="img/doctor2cert/cert6.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert7.jpg"><img src="img/doctor2cert/cert7.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert8.jpg"><img src="img/doctor2cert/cert8.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert9.jpg"><img src="img/doctor2cert/cert9.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert10.jpg"><img src="img/doctor2cert/cert10.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert11.jpg"><img src="img/doctor2cert/cert11.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert12.jpg"><img src="img/doctor2cert/cert12.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert13.jpg"><img src="img/doctor2cert/cert13.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert14.jpg"><img src="img/doctor2cert/cert14.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert15.jpg"><img src="img/doctor2cert/cert15.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert16.jpg"><img src="img/doctor2cert/cert16.jpg" alt="cert" class="cert-item"></a>
+                            <a class="cert-link" data-fancybox="gallery-2" href="img/doctor2cert/cert17.jpg"><img src="img/doctor2cert/cert17.jpg" alt="cert" class="cert-item"></a>
+
+                        </div>
+                        <div class="list-desc">Показать все дипломы и сертификаты (<span class="item-sum"></span>)</div>
+                    </div>
+                    <div class="desc-wrapper">
+                        <span class="card-title">Журбина Анастасия Анатольевна</span>
+                        <span class="card-desc">Врач-офтальмолог первой категории с 2017 года. С отличием окончила резидентуру по специальности «Офтальмология, в том числе детская».</span>
+                        <br>
+                        <span class="card-desc">Активно занимается хирургической деятельностью по направлениям - лазерная коррекция зрения и факоэмульсификация катаракты.</span>
+                        <br>
+                        <span class="card-desc">Регулярно проходит повышение квалификации и принимает участие спикером международных конгрессов, офтальмологических конференциях, международных семинаров.</span>
+                        <br>
+                        <span class="card-desc">Основные направления: факоэмульсификация катаракты, факичные линзы, лазерная коррекции зрения, хирургия глаукомы, исправление косоглазия.</span>
+                        <!--<span class="card-quote">“Самый лучший офтальмолог, моя любимая доктор Елена Бахтияровна всегда в передовых инновациях одна из первых!”</span>
+                        <div class="quote-link">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.375C2.89838 0.375 0.375 2.89838 0.375 6V15C0.375 18.1016 2.89838 20.625 6 20.625H15C18.1016 20.625 20.625 18.1016 20.625 15V6C20.625 2.89838 18.1016 0.375 15 0.375H6ZM6 2.625H15C16.8608 2.625 18.375 4.13925 18.375 6V15C18.375 16.8608 16.8608 18.375 15 18.375H6C4.13925 18.375 2.625 16.8608 2.625 15V6C2.625 4.13925 4.13925 2.625 6 2.625ZM16.125 3.75C15.8266 3.75 15.5405 3.86853 15.3295 4.0795C15.1185 4.29048 15 4.57663 15 4.875C15 5.17337 15.1185 5.45952 15.3295 5.6705C15.5405 5.88147 15.8266 6 16.125 6C16.4234 6 16.7095 5.88147 16.9205 5.6705C17.1315 5.45952 17.25 5.17337 17.25 4.875C17.25 4.57663 17.1315 4.29048 16.9205 4.0795C16.7095 3.86853 16.4234 3.75 16.125 3.75ZM10.5 4.875C7.39838 4.875 4.875 7.39838 4.875 10.5C4.875 13.6016 7.39838 16.125 10.5 16.125C13.6016 16.125 16.125 13.6016 16.125 10.5C16.125 7.39838 13.6016 4.875 10.5 4.875ZM10.5 7.125C12.3608 7.125 13.875 8.63925 13.875 10.5C13.875 12.3608 12.3608 13.875 10.5 13.875C8.63925 13.875 7.125 12.3608 7.125 10.5C7.125 8.63925 8.63925 7.125 10.5 7.125Z" fill="#FFFFFF"/>
+                            </svg>
+                            Igynekolog_larissa
+                        </div>-->
+                    </div>
+                </div>
+                <div class="doctors__card hide">
+                    <div class="img-wrapper">
+                        <img src="img/doctor33.jpg" alt="img" class="doctor-img">
+                    </div>
+                    <div class="cert-wrapper">
+                        <div class="cert-list">
+                        </div>
+                        <div class="list-desc">Показать все дипломы и сертификаты (<span class="item-sum"></span>)</div>
+                    </div>
+                    <div class="desc-wrapper">
+                        <span class="card-title">Портнова Марина Георгиевна</span>
+                        <span class="card-desc">Врач-Офтальмолог</span>
+                        <br>
+                        <span class="card-desc">Окончила КГМИ в 1995г. с отличием. Первичная специализация с 06.1996-по 12.1996 г. на базе "восстановительного центра " гл. отд. 1999г. «нейтроофтальмология» на базе института повышения квалификации врачей в городе Алматы.
+                            </span>
+                        <br>
+                        <span class="card-desc"></span>
+                        <br>
+                        <span class="card-desc">Основные направления: факоэмульсификация катаракты, факичные линзы, лазерная коррекции зрения, хирургия глаукомы, исправление косоглазия.</span>
+                        <!--<span class="card-quote">“Самый лучший офтальмолог, моя любимая доктор Елена Бахтияровна всегда в передовых инновациях одна из первых!”</span>
+                    <div class="quote-link">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 0.375C2.89838 0.375 0.375 2.89838 0.375 6V15C0.375 18.1016 2.89838 20.625 6 20.625H15C18.1016 20.625 20.625 18.1016 20.625 15V6C20.625 2.89838 18.1016 0.375 15 0.375H6ZM6 2.625H15C16.8608 2.625 18.375 4.13925 18.375 6V15C18.375 16.8608 16.8608 18.375 15 18.375H6C4.13925 18.375 2.625 16.8608 2.625 15V6C2.625 4.13925 4.13925 2.625 6 2.625ZM16.125 3.75C15.8266 3.75 15.5405 3.86853 15.3295 4.0795C15.1185 4.29048 15 4.57663 15 4.875C15 5.17337 15.1185 5.45952 15.3295 5.6705C15.5405 5.88147 15.8266 6 16.125 6C16.4234 6 16.7095 5.88147 16.9205 5.6705C17.1315 5.45952 17.25 5.17337 17.25 4.875C17.25 4.57663 17.1315 4.29048 16.9205 4.0795C16.7095 3.86853 16.4234 3.75 16.125 3.75ZM10.5 4.875C7.39838 4.875 4.875 7.39838 4.875 10.5C4.875 13.6016 7.39838 16.125 10.5 16.125C13.6016 16.125 16.125 13.6016 16.125 10.5C16.125 7.39838 13.6016 4.875 10.5 4.875ZM10.5 7.125C12.3608 7.125 13.875 8.63925 13.875 10.5C13.875 12.3608 12.3608 13.875 10.5 13.875C8.63925 13.875 7.125 12.3608 7.125 10.5C7.125 8.63925 8.63925 7.125 10.5 7.125Z" fill="#FFFFFF"/>
+                        </svg>
+                        Igynekolog_larissa
+                    </div>-->
+                    </div>
+                </div>
+                <div class="doctors__card hide">
+                    <div class="img-wrapper">
+                        <img src="img/doctor44.jpg" alt="img" class="doctor-img">
+                    </div>
+                    <div class="cert-wrapper">
+                        <div class="cert-list">
+                        </div>
+                        <div class="list-desc">Показать все дипломы и сертификаты (<span class="item-sum"></span>)</div>
+                    </div>
+                    <div class="desc-wrapper">
+                        <span class="card-title">Горбатова Елена Ивановна</span>
+                        <span class="card-desc">Врач-Офтальмолог</span>
+                        <br>
+                        <span class="card-desc">Закончила медицинский институт по специальности лечебное дело. Проходила мастер – классы и специализации в Казахстане и России. Участвовала в международных и внутренних конференциях.</span>
+                        <br>
+                        <span class="card-desc">Провожу взрослый и детский прием.</span>
+                        <br>
+                        <span class="card-desc">Основное направление в работе - донная лазерная хирургия, лечение сетчатки.</span>
+                        <br>
+                        <span class="card-desc">Желание работать врачом сформировалось еще в детстве. Стать офтальмологом – осознанное решение. Эта специальность – симбиоз практической медицины и точных наук. Всегда интересно, индивидуализировано для каждого пациента.</span>
+                        <br>
+                        <span class="card-desc">Основные направления: факоэмульсификация катаракты, факичные линзы, лазерная коррекции зрения, хирургия глаукомы, исправление косоглазия.</span>
+                        <!--<span class="card-quote">“Самый лучший офтальмолог, моя любимая доктор Елена Бахтияровна всегда в передовых инновациях одна из первых!”</span>
+                <div class="quote-link">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 0.375C2.89838 0.375 0.375 2.89838 0.375 6V15C0.375 18.1016 2.89838 20.625 6 20.625H15C18.1016 20.625 20.625 18.1016 20.625 15V6C20.625 2.89838 18.1016 0.375 15 0.375H6ZM6 2.625H15C16.8608 2.625 18.375 4.13925 18.375 6V15C18.375 16.8608 16.8608 18.375 15 18.375H6C4.13925 18.375 2.625 16.8608 2.625 15V6C2.625 4.13925 4.13925 2.625 6 2.625ZM16.125 3.75C15.8266 3.75 15.5405 3.86853 15.3295 4.0795C15.1185 4.29048 15 4.57663 15 4.875C15 5.17337 15.1185 5.45952 15.3295 5.6705C15.5405 5.88147 15.8266 6 16.125 6C16.4234 6 16.7095 5.88147 16.9205 5.6705C17.1315 5.45952 17.25 5.17337 17.25 4.875C17.25 4.57663 17.1315 4.29048 16.9205 4.0795C16.7095 3.86853 16.4234 3.75 16.125 3.75ZM10.5 4.875C7.39838 4.875 4.875 7.39838 4.875 10.5C4.875 13.6016 7.39838 16.125 10.5 16.125C13.6016 16.125 16.125 13.6016 16.125 10.5C16.125 7.39838 13.6016 4.875 10.5 4.875ZM10.5 7.125C12.3608 7.125 13.875 8.63925 13.875 10.5C13.875 12.3608 12.3608 13.875 10.5 13.875C8.63925 13.875 7.125 12.3608 7.125 10.5C7.125 8.63925 8.63925 7.125 10.5 7.125Z" fill="#FFFFFF"/>
+                    </svg>
+                    Igynekolog_larissa
+                </div>-->
+                    </div>
+                </div>
+            </div>
+            <button class="list-btn">Показать всех докторов клиники</button>
+        </div>
+    </section>
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <span class="section-title">отзывы</span>
+            <h2 class="title">«Это самый лучший центр в Караганде.  Врачи отличные. Мне больше всего понравилось медицинское оснащение современного времени»</h2>
+            <span class="subtitle">Отзывы о врачах, клинике и самой операции</span>
+            <div class="reviews__list">
+                <div class="list-wrapper">
+                    <div class="list-item review-item">
+                        <a href="https://youtu.be/c3VNPtYl8Ok" class="img-link" data-fancybox="review-1" target="_blank">
+                            <img src="img/review1.png" alt="img" class="item-img">
+                        </a>
+                        <div class="item-desc">
+                            <img src="img/review-google.png" alt="icon" class="desc-icon">
+                            <div class="desc-title">
+                                «Был там на коррекции зрения, все очень понравилось, прошло отлично, спустя почти два года зрение осталось такое же - 100%, по цене отлично...»
+                            </div>
+                            <div class="desc-review">
+                                Консультация, 50000 укрепление сетчатки и 280000 сама коррекция зрения. Зрение было -7 один глаз и второй -6, контактные линзы носил 10 лет, врачи и помощники все опытные - это понравилось, вежливые и цивильно. Благодарю и желаю успехов и процветания и так же помогать людям с их зрением.
+                            </div>
+                            <button class="desc-btn review-btn openModal" data-review="modal-review">Читать целиком</button>
+                            <div class="review-author">
+                                <div class="author-icon">С</div>
+                                <div class="author-wrapper">
+                                    <div class="author-name">Дмитрий Ким</div>
+                                    <div class="author-date">25 декабря 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item review-item">
+                        <a href="https://youtu.be/pDfC933c7Os" class="img-link" data-fancybox="review-2" >
+                            <img src="img/review3.png" alt="img" class="item-img">
+                        </a>
+                        <div class="item-desc">
+                            <img src="img/review-google.png" alt="icon" class="desc-icon">
+                            <div class="desc-title">
+                                «Хочу написать честный отзыв о клинике Глазолик. Я сама из Астаны и моя клиника отправила в Глазолик для обследования и лечения»
+                            </div>
+                            <div class="desc-review">
+                                Ожидания были небольшие читая негативные отзывы, но приехав клиника встретила меня очень теплой встречой. Меня записали онлайн через ватзапп к врачу Горбатовой Елене Ивановне. Хочу  поблагодарить за профессионализм и внимательность врачу. Я благодарю заведущей и весь медицинский персонал за хорошее, доброе и внимательное отношение к пациентам! Желаю процветания и здоровья всем.
+                            </div>
+                            <button class="desc-btn review-btn openModal" data-review="modal-review">Читать целиком</button>
+                            <div class="review-author">
+                                <div class="author-icon">С</div>
+                                <div class="author-wrapper">
+                                    <div class="author-name">Кулсара Кулчикова</div>
+                                    <div class="author-date">Год назад</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item review-item">
+                        <a href="https://youtu.be/mmBBhtZ3bSM" class="img-link" data-fancybox="review-3" >
+                            <img src="img/review6.png" alt="img" class="item-img">
+                        </a>
+                        <div class="item-desc">
+                            <img src="img/review-google.png" alt="icon" class="desc-icon">
+                            <div class="desc-title">
+                                «Кто читает здесь отзывы и не может решиться!»
+                            </div>
+                            <div class="desc-review">
+                                Не ручаюсь советовать делать операцию, все таки она и есть операция. Сами вправе решать. Но!
+                                Но я утром пришел заплатил и до обеда обследование. В 13.00 операция 8-10 минут. Пошел домой спать. В 19.00 проснулся. И все идеально вижу. Прошло 7 месяцев. Ничего не изменилось!
+                            </div>
+                            <button class="desc-btn review-btn openModal" data-review="modal-review">Читать целиком</button>
+                            <div class="review-author">
+                                <div class="author-icon">С</div>
+                                <div class="author-wrapper">
+                                    <div class="author-name">Айдыс С</div>
+                                    <div class="author-date">2022 год</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="list-item review-item">
+                        <a href="https://youtu.be/I7TSVhWqjJc" class="img-link" data-fancybox="review-4" >
+                            <img src="img/review4.png" alt="img" class="item-img">
+                        </a>
+                        <div class="item-desc">
+                            <img src="img/review-google.png" alt="icon" class="desc-icon">
+                            <div class="desc-title">
+                                «Был не в одном диагностическом центре, данный самый лучший по моему опыту
+                            </div>
+                            <div class="desc-review">
+                                Очень внимательный, вежливый персонал, профессиональный подход к каждому пациенту. Делали операцию по устранению катаракты на оба глаза, после операции наблюдали до той поры, пока 100% не убедились в результате и качестве операции. Благодарим
+                                Очень внимательный, вежливый персонал, профессиональный подход к каждому пациенту. Делали операцию по устранению катаракты на оба глаза, после операции наблюдали до той поры, пока 100% не убедились в результате и качестве операции. Благодарим
+                            </div>
+                            <button class="desc-btn review-btn openModal" data-review="modal-review">Читать целиком</button>
+                            <div class="review-author">
+                                <div class="author-icon">С</div>
+                                <div class="author-wrapper">
+                                    <div class="author-name">Иван Рябухин</div>
+                                    <div class="author-date">3 мая 2024 года</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item review-item">
+                        <a href="https://youtu.be/hbrz8NFaBV8" class="img-link" data-fancybox="review-5" >
+                            <img src="img/review5.png" alt="img" class="item-img">
+                        </a>
+                        <div class="item-desc">
+                            <img src="img/review-google.png" alt="icon" class="desc-icon">
+                            <div class="desc-title">
+                                «Был не в одном диагностическом центре, данный самый лучший по моему опыту
+                            </div>
+                            <div class="desc-review">
+                                Очень внимательный, вежливый персонал, профессиональный подход к каждому пациенту. Делали операцию по устранению катаракты на оба глаза, после операции наблюдали до той поры, пока 100% не убедились в результате и качестве операции. Благодарим
+                                Очень внимательный, вежливый персонал, профессиональный подход к каждому пациенту. Делали операцию по устранению катаракты на оба глаза, после операции наблюдали до той поры, пока 100% не убедились в результате и качестве операции. Благодарим
+                            </div>
+                            <button class="desc-btn review-btn openModal" data-review="modal-review">Читать целиком</button>
+                            <div class="review-author">
+                                <div class="author-icon">С</div>
+                                <div class="author-wrapper">
+                                    <div class="author-name">Иван Рябухин</div>
+                                    <div class="author-date">3 мая 2024 года</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item review-item">
+                        <a href="https://youtu.be/mmBBhtZ3bSM" class="img-link" data-fancybox="review-6" >
+                            <img src="img/review6.png" alt="img" class="item-img">
+                        </a>
+                        <div class="item-desc">
+                            <img src="img/review-google.png" alt="icon" class="desc-icon">
+                            <div class="desc-title">
+                                «Был не в одном диагностическом центре, данный самый лучший по моему опыту
+                            </div>
+                            <div class="desc-review">
+                                Очень внимательный, вежливый персонал, профессиональный подход к каждому пациенту. Делали операцию по устранению катаракты на оба глаза, после операции наблюдали до той поры, пока 100% не убедились в результате и качестве операции. Благодарим
+                                Очень внимательный, вежливый персонал, профессиональный подход к каждому пациенту. Делали операцию по устранению катаракты на оба глаза, после операции наблюдали до той поры, пока 100% не убедились в результате и качестве операции. Благодарим
+                            </div>
+                            <button class="desc-btn review-btn openModal" data-review="modal-review">Читать целиком</button>
+                            <div class="review-author">
+                                <div class="author-icon">С</div>
+                                <div class="author-wrapper">
+                                    <div class="author-name">Иван Рябухин</div>
+                                    <div class="author-date">3 мая 2024 года</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <button class="reviews__btn">Посмотреть все <span class="reviews-sum"></span> отзыва</button>
+            </div>
+        </div>
+    </section>
+    <section class="price section" id="price">
+        <div class="container">
+            <span class="section-title">стоимость</span>
+            <h2 class="title">Стоимость лечения катаракты на один глаз</h2>
+            <div class="price__list">
+                <div class="item-wrapper">
+                    <div class="price-item">
+                        <span class="item-title">Полная 2-х часовая диагностика зрения</span>
+                        <span class="item-desc">
+                            Выявим возможные сопутствующие осложнения,
+                            чтобы правильно подобрать искусственный хрусталик
+                        </span>
+                        <div class="btn-wrapper">
+                            <div class="sum-wrapper">
+                                <div class="item-sum">15 000 ₸</div>
+                            </div>
+                            <button class="item-btn main-btn openModal" data-modal="modal-consultation">Записаться</button>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <span class="item-title">Комплекс бесшовного удаления катаракты методом факоэмульсификации (в зависимости от вида хрусталика)</span>
+                        <span class="item-subtitle">В стоимость входит:</span>
+                        <ul class="desc-list">
+                            <li class="item-desc">Сама операция</li>
+                            <li class="item-desc">Искусственный хрусталик (ИОЛ)</li>
+                            <li class="item-desc">2 флакона капель: увлажняющие и противовоспалительные</li>
+                            <li class="item-desc">Послеоперационные осмотры в течение 6 месяцев</li>
+                        </ul>
+                        <div class="btn-wrapper">
+                            <div class="sum-wrapper">
+                                <div class="item-sum">245 000 ₸ —</div>
+                                <div class="item-sum">400 000 ₸</div>
+                            </div>
+                            <div class="sum-subtitle">стоимость зависит от типа выбранного хрусталика</div>
+                            <button class="item-btn main-btn openModal" data-modal="modal-consultation">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price__payment">
+                <img src="img/bank-logo.svg" alt="icon" class="payment-logo">
+                <div class="payment-desc">Операцию можно оплатить в рассрочку без % от 3 месяцев</div>
+                <a href="files/payment.pdf" class="payment-link" target="_blank">Узнать подробнее</a>
+            </div>
+            <div class="price__form">
+                <img src="img/price-form.jpg" alt="img" class="form-img">
+                <div class="form-wrapper">
+                    <span class="form-title">Запишитесь на диагностику</span>
+                    <span class="form-title-mobile">Запишитесь на диагностику и узнайте, насколько безопасно делать коррекцию именно в вашем случае</span>
+                    <span class="form-subtitle">Для записи оставьте контакты, перезвоним в течение 30 минут
+                        <span class="subtitle-accent">в рабочее время</span>
+                    </span>
+                    <span class="form-sum">17 000 ₸</span>
+                    <span class="sum-desc">Стоимость диагностики </span>
+                    <form action="./php/mail.php"
+                          id="priceForm"
+                          method="post"
+                          accept-charset="utf-8"
+                          enctype="multipart/form-data"
+                          class="form-body">
+                        <input type="text" class="input" name="phone" required placeholder="Телефон">
+                        <input type="text" class="input" name="name" placeholder="Имя">
+                        <button class="price-btn main-btn" type="submit">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts section" id="contacts">
+        <div class="container">
+            <span class="section-title">контакты</span>
+            <div class="contacts__wrapper">
+                <div class="contacts__text">
+                    <h2 class="title">Контакты</h2>
+                    <div class="contacts__address">Караганда, ул. Ержанова, 12</div>
+                    <button class="contacts__map openModal" data-modal="modal-map">На карте</button>
+                    <a href="tel:+77751173333" class="contacts__phone">+7 (775) 117 33 33</a>
+                    <button class="contacts__popup openModal" data-modal="modal-consultation">Можем перезвонить</button>
+                    <span class="contacts__desc">Понедельник-пятница — с 9:00 до 17:00</span>
+                    <span class="contacts__desc">Суббота — с 9:00 до 13:00</span>
+                    <span class="contacts__desc">Воскресенье — выходной</span>
+                </div>
+                <div class="contacts__background">
+                    <img src="img/contacts.jpg" alt="img" class="background-img">
+                </div>
+            </div>
+            <div class="contacts__bottom">
+                <div class="img-wrapper">
+                    <img src="img/advantage-form.jpg" alt="img" class="bottom-img">
+                </div>
+                <div class="bottom-desc">Если у вас остались вопросы об операции или клинике — напишите нам</div>
+                <a href="https://wa.me/+77019842743" class="bottom-link" target="_blank">Написать в WhatsApp</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--footer-->
+<%= _.template(require('./../includes/footer.html').default)(data) %>
+

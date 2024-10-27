@@ -1,0 +1,126 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a href="#header" class="footer__logo">
+                <img src="img/logo.svg" alt="logo" class="logo-img">
+                <span class="text-wrapper">
+                    <span class="logo-title">ГлазоЛик</span>
+                    <span class="logo-subtitle">Офтальмологическая клиника нового поколения</span>
+                </span>
+            </a>
+            <div class="contact-wrapper">
+                <a href="#" class="footer__link">Памятка</a>
+                <div class="footer__contact">
+                    <a href="tel:+77008367870" class="contact-phone">+7 (700) 836 78 70</a>
+                    <a href="mailto:nfo@glazolik.kz" class="contact-email">nfo@glazolik.kz</a>
+                </div>
+            </div>
+            <div class="link-wrapper">
+                <a href="https://diple.kz/" class="diple">Сделано в <span class="diple-icon"></span></a>
+                <a href="#" class="link-item">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg closeModal"></div>
+    <div class="modal modal-consultation">
+        <button class="modal-close closeModal"></button>
+        <h3 class="title">Получите консультацию медсестры по всем вопросам</h3>
+        <span class="modal-subtitle">Оставьте контакты, мы перезвоним в течение 30 минут в рабочее время</span>
+        <form action="./php/mail.php"
+              id="consultationModal"
+              method="post"
+              accept-charset="utf-8"
+              enctype="multipart/form-data"
+              class="form-body">
+            <input type="text" class="input" name="phone" required placeholder="Телефон">
+            <input type="text" class="input" name="name" placeholder="Имя">
+            <button class="modal-btn main-btn" type="submit">Получить консультацию</button>
+        </form>
+    </div>
+    <div class="modal modal-map">
+        <button class="modal-close closeModal"></button>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac6b42b8045c9c5ad8ebcd633c3f8b9c184b1c6927415290023420b30b8fe89df&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+    </div>
+    <div class="modal-bg-review closeModal"></div>
+    <div class="modal modal-review">
+        <button class="modal-close closeModal"></button>
+        <div class="icon-wrapper"></div>
+        <p class="review-paragraph"></p>
+    </div>
+    <div class="modal modal-cataract">
+        <button class="modal-close closeModal"></button>
+        <div class="cataract-title">Что такое катаракта?</div>
+        <div class="cataract-subtitle">
+            Катаракта — это заболевание глаза, при котором теряется
+            прозрачность хрусталика из-за возрастных изменений,
+            травмы или других причин.
+            <br>
+            <br>
+            Хрусталик — это биологическая линза, расположенная внутри глаза,
+            которая фокусирует лучи света на сетчатку.
+            Помутневший хрусталик не пропускает свет и
+            зрение начинает постепенно ухудшаться.
+        </div>
+        <img src="img/cataract.png" alt="img" class="cataract-img">
+        <span class="img-subtitle">Стадии созревания катаракты</span>
+        <div class="cataract-list">
+            <div class="list-item">
+                <div class="item-title">Что будет, если не вылечить катаракту?</div>
+                <div class="item-desc">
+                    По мере помутнения хрусталика зрение будет всё больше ухудшаться.
+                    Сначала предметы будут мутными и расплывчатыми,
+                    а потом останется только общее восприятие света.
+                    <br>
+                    <br>
+                    К сожалению, катаракта не проходит сама.
+                    В некоторых случаях возможно временное улучшение на короткий срок,
+                    но затем ухудшение возобновляется.
+                    <br>
+                    <br>
+                    Зачастую катаракта сопряжена с другими заболеваниями глаз,
+                    например с глаукомой. Если вовремя её не вылечить,
+                    то можно полностью и навсегда лишиться зрения.
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="item-title">На какой стадии лучше делать операцию и стоит ли ждать созревания?</div>
+                <div class="item-desc">
+                    Катаракту можно вылечить на любой стадии.
+                    <br>
+                    <br>
+                    Однако, чем более зрелая катаракта,
+                    тем плотнее становится хрусталик. Плотный хрусталик сложнее удалить.
+                    В этом случае операция длится дольше, а восстановление занимает больше времени.
+                    <br>
+                    <br>
+                    Поэтому чем раньше вы придёте на операцию,
+                    тем легче она пройдёт и тем быстрее вы восстановитесь.
+                </div>
+            </div>
+        </div>
+        <div class="cataract-desc">
+            <div class="desc-title">Есть ли другие способы вылечить катаракту?</div>
+            <div class="desc-paragraph">
+                Хирургическая замена хрусталика — единственный способ лечения.
+                Других способов не существует.
+                <br>
+                <br>
+                Это связано с тем, что катаракта возникает из-за помутнения хрусталика.
+                А так как в нём нет нервов и сосудов — никакие вещества из таблеток,
+                мазей и примочек до него попросту не дойдут.
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script src="uploads/jquery3.4.1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="https://malsup.github.io/jquery.form.js"></script>
+<script src="uploads/jquery-migrate.js"></script>
+<script src="uploads/jquery.fancybox.min.js"></script>
+<script src="uploads/swiper-bundle.min.js"></script>
+<script src="uploads/jquery.maskedinput.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
